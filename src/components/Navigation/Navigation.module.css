@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+.navigation{
+    display: flex;
+    width: 100%;
+}
+.navigation__item:not(:last-child){
+    margin-right: 15px;
+}
+
+
+    @media screen and (min-width: 480px) {
+      .container{
+        width: 480px;
+      }
+
+    }
+
+     @media screen and (min-width: 768px) {
+    .container {
+            width: 768px;
+        }
+    .navigation__item:not(:last-child) {
+        margin-right: 25px;
+    }
+    }
+ 
+    @media screen and (min-width: 1200px) {
+    .container {
+            width: 1200px;
+        }
+    .navigation__item:not(:last-child) {
+        margin-right: 40px;
+    }
+    }   

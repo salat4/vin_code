@@ -1,16 +1,28 @@
 import { NavLink } from "react-router-dom";
-
+import styled from "./Navigation.module.css"
 export const Navigation = () => {
+    let activeStyle  = {
+        color: "#00FF00",
+    };
+    let disabledStyle = {
+        
+    }
     return (
         <header>
-            <ul>
-                <li>
-                    <NavLink to = "/">Home</NavLink>
-                </li>
-                  <li>
-                    <NavLink to = "/variables">Variables</NavLink>
-                </li>
-            </ul>
+            <section className={styled.container}>
+                <ul className={styled.navigation}>
+                    <li className={styled.navigation__item}>
+                        <NavLink to="/" style={({ isActive }) =>
+                    isActive ? activeStyle : undefined 
+                    }>Home</NavLink>
+                    </li>
+                    <li className={styled.navigation__item}>
+                        <NavLink to = "/variables" style={({ isActive }) =>
+                    isActive ? activeStyle : undefined 
+                    }>Variables</NavLink>
+                    </li>
+                </ul>
+            </section>
         </header>
     )
 }
