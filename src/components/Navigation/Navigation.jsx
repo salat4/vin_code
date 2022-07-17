@@ -4,9 +4,6 @@ export const Navigation = () => {
     let activeStyle  = {
         color: "#00FF00",
     };
-    let disabledStyle = {
-        
-    }
     return (
         <header>
             <section className={styled.container}>

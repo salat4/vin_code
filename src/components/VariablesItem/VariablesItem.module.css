@@ -1,0 +1,38 @@
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.button{
+    margin-bottom: 10px;
+}
+.list__item:not(:last-child){
+    margin-bottom: 10px;
+}
+p{
+    margin-bottom: 10px;
+}
+
+
+@media screen and (min-width: 480px) {
+    .container {
+        width: 480px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}

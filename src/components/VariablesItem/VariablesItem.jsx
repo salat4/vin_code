@@ -1,15 +1,11 @@
 import {  useParams } from 'react-router-dom';
 import { useEffect,useState } from "react";
 import * as API from "../../services/FetchData";
-import {  useNavigate  } from "react-router-dom";
-
+import styled from "./VariablesItem.module.css"
 
 export const VariablesItem = () => {
     const [item, setItem] = useState({})
     let { variables_id } = useParams();
-    let navigate = useNavigate();
-
-
     useEffect(()=>{
         async function FetchList(){
             const id = await API.FetchList()
@@ -19,17 +15,17 @@ export const VariablesItem = () => {
         FetchList()
     }, [variables_id])    
     return (
-        <div>
-            <button onClick = {()=>{navigate('/Variables')}}>Back</button>
+        <main >
+            <section className={ styled.container}>
+                <ul>
+                    <li className={styled.list__item}>
+                        {item.GroupName}
+                    </li>
+                    <li className={styled.list__item}
+                    dangerouslySetInnerHTML={{__html:item.Description}}></li>
+                </ul>
 
-            <ul>
-                <li>
-                    {item.GroupName}
-                </li>
-                <li
-                dangerouslySetInnerHTML={{__html:item.Description}}></li>
-            </ul>
-          
-        </div>
+            </section>
+        </main>
     )
 }

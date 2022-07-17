@@ -1,0 +1,42 @@
+.container{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.list__item:not(:last-child){
+    margin-bottom: 10px;
+}
+.list__item:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.list__item:focus{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+@media screen and (min-width: 480px) {
+    .container {
+        width: 480px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
